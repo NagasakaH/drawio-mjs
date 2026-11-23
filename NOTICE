@@ -1,0 +1,56 @@
+drawio-mjs
+Copyright 2026 NagasakaH
+
+This product includes software and stencil/shape assets derived from:
+
+1. draw.io (https://github.com/jgraph/drawio, v29.6.6)
+   and draw.io Desktop (https://github.com/jgraph/drawio-desktop)
+   Copyright (c) 2006-2025, JGraph Holdings Ltd (draw.io Ltd)
+   Copyright (c) 2006-2025, draw.io AG
+   Licensed under the Apache License, Version 2.0.
+
+   Bundled / referenced components in `vendor/drawio-oss/` and `src/`:
+   - `vendor/drawio-oss/drawio-shapes-bundle.js`: Concatenated pure-JS shape,
+     geometry, edge routing, perimeter, marker, and model definitions from
+     `src/main/webapp/mxgraph/src/*`, `src/main/webapp/js/grapheditor/Shapes.js`,
+     and `src/main/webapp/js/shapes-14-6-5.min.js`.
+   - `vendor/drawio-oss/stencils-map.json`: Extracted stencil XML dictionary from
+     `src/main/webapp/js/stencils.min.js`.
+   - `vendor/drawio-oss/default-style.xml` and `dark-default-style.xml`:
+     Extracted from `src/main/webapp/styles/default.xml` and `dark-default.xml`.
+   - `src/png-meta.mjs`: ESM port of `writePngWithText` and PNG chunk XML extraction
+     from `drawio-desktop/src/main/electron.js`.
+   - `src/oss-runtime.mjs` and `src/renderer.mjs`: Pure Node.js (.mjs) adapter
+     and headless SVG renderer modeled on `mxSvgCanvas2D`, `mxGraphView`, and
+     `mxCellRenderer`.
+
+================================================================================
+ADDITIONAL TERMS FOR ICON SETS AND STENCIL LIBRARIES
+(`vendor/drawio-oss/stencils-map.json` & `vendor/drawio-oss/drawio-shapes-bundle.js`)
+================================================================================
+
+From `drawio/src/main/webapp/stencils/LICENSE` and `drawio/src/main/webapp/shapes/LICENSE`:
+
+> The icon sets and stencil libraries included in this software, and any
+> derivatives thereof (including conversions to other formats, traced
+> reproductions, substantially similar visual representations, or AI-generated
+> images created using these icons as reference or training input), may not be
+> used as software assets in, distributed for use with, or incorporated into
+> Atlassian products or products distributed through the Atlassian marketplace
+> or plugin ecosystem, without explicit written permission.
+>
+> This restriction does not apply to end-user diagram output (such as exported
+> images or documents) created using this software.
+
+Third-party architecture icons included in the stencil libraries (such as AWS,
+Google Cloud Platform, Microsoft Azure, Kubernetes, Cisco, IBM, etc.) are the
+trademarks and/or copyrighted property of their respective owners.
+
+================================================================================
+TRADEMARK DISCLAIMER
+================================================================================
+
+"draw.io" is a registered EU trademark (#018062448) of draw.io AG.
+This project (`drawio-mjs`) is an independent, unofficial open-source tool and
+is NOT affiliated with, endorsed by, or sponsored by draw.io Ltd (JGraph) or
+draw.io AG.

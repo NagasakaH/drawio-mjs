@@ -1,0 +1,33 @@
+{
+  "name": "drawio-mjs",
+  "version": "1.0.0",
+  "description": "Pure Node.js (.mjs) draw.io XML to PNG/SVG generator powered by draw.io OSS shapes & stencils",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "bin": {
+    "drawio2png": "./bin/drawio2png.mjs"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "vendor/",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "demo": "node examples/generate-demos.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NagasakaH/drawio-mjs.git"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  },
+  "license": "Apache-2.0"
+}
