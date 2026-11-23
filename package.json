@@ -19,6 +19,7 @@
     "README.md"
   ],
   "scripts": {
+    "build": "node scripts/build-bundle.mjs",
     "test": "node --test test/*.test.mjs",
     "demo": "node examples/generate-demos.mjs"
   },
@@ -29,5 +30,8 @@
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@resvg/resvg-wasm": "^2.6.2"
+  }
 }

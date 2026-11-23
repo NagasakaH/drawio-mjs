@@ -28,10 +28,32 @@
 
 ## セットアップ
 
+### 方法A: GitHub Releases から単一ファイル (`drawio2png.mjs`) をダウンロードして使う（`npm install` 不要）
+
+[GitHub Releases](https://github.com/NagasakaH/drawio-mjs/releases) で公開されている **`drawio2png.mjs`** は、すべてのシェイプ・ステンシル（10,000種以上）と WebAssembly 版 `resvg`（`@resvg/resvg-wasm`）を1ファイルに内蔵しているため、**`npm install` なしで単体ファイルとしてそのまま実行・`import` 可能**です。
+
+```bash
+# 単一ファイルをダウンロード
+curl -LO https://github.com/NagasakaH/drawio-mjs/releases/latest/download/drawio2png.mjs
+
+# そのままCLIとして実行 (node_modules 不要)
+node drawio2png.mjs input.drawio -o output.drawio.png
+```
+
+```js
+// 単一ファイルをそのまま .mjs モジュールとして import 可能
+import { convertXmlToPng } from "./drawio2png.mjs";
+```
+
+### 方法B: リポジトリをクローンして使う / 単一ファイルをビルドする
+
 ```bash
 git clone https://github.com/NagasakaH/drawio-mjs.git
 cd drawio-mjs
 npm install
+
+# 単一ファイル (dist/drawio2png.mjs) をビルドする場合
+npm run build
 ```
 
 ---
