@@ -1469,12 +1469,13 @@ function createHeadlessGraphAndView(model, baseStyles, themeOptions, runtime, gl
       text.dialect =
         style.html == "1" ? mxConstants.DIALECT_STRICTHTML : mxConstants.DIALECT_SVG;
       text.apply(state);
+      text.horizontal = horizontal;
       text.scale = view.scale;
+      state.text = text;
 
       // Compute label bounds using mxCellRenderer.prototype.getLabelBounds
       const cellRenderer = new mxCellRenderer();
       text.bounds = cellRenderer.getLabelBounds(state, text);
-      state.text = text;
     }
   }
 
